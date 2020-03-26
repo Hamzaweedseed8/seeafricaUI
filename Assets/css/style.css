@@ -1,0 +1,57 @@
+@font-face { 
+    font-family: samsungsharpsans; 
+    src: url('../Fonts/Circular Std Black.ttf'); 
+} 
+@font-face { 
+    font-family: Avenir-Light; 
+    src: url('../Fonts/Circular Std Bold.ttf'); 
+} 
+@font-face { 
+    font-family: samsungsharpsans-bold; 
+    src: url('../Fonts/Circular Std Medium.ttf'); 
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box !important;
+}
+
+.nav-color
+{
+	background-color: #10103d;
+}
+.nav-txt
+{
+	color: #66b5ff;
+	font-family: Circular Std Medium;
+
+}
+.nav-txt_2
+{
+	color: white;
+	font-family: Circular Std Medium;
+}
+li
+{
+	display: inline;
+	padding-right: 50px;
+	color: white;
+}
+.section
+{
+	background-color:#1a1a65;
+	width: auto;
+	height: 600px;
+}
+.section-txt
+{
+	font-family: Circular Std Black;
+	color:#e62e00;
+	font-size: 4em;
+
+}
+.container
+{
+	padding-top: 100px;
+
+}
