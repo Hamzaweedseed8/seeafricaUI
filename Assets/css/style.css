@@ -1,112 +1,173 @@
 @font-face { 
-    font-family: samsungsharpsans; 
-    src: url('../Fonts/Circular Std Black.ttf'); 
+    font-family: StdBlack; 
+    src: url('../fonts/CircularStdBlack.ttf'); 
 } 
 @font-face { 
-    font-family: Avenir-Light; 
-    src: url('../Fonts/Circular Std Bold.ttf'); 
+    font-family: StdBold; 
+    src: url('../fonts/CircularStdBold.ttf'); 
 } 
 @font-face { 
-    font-family: samsungsharpsans-bold; 
-    src: url('../Fonts/Circular Std Medium.ttf'); 
+    font-family: StdBook; 
+    src: url('../fonts/CircularStdBook.ttf'); 
 }
+@font-face { 
+    font-family: StdMedium; 
+    src: url('../fonts/CircularStdMedium.ttf'); 
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box !important;
 }
-/*Navigation Bar */
-.nav-color
-{
-	background-color: #10103d;
+body{
+    font-family: 'Nunito', sans-serif;
+    /* font-family: samsungsharpsans; */
 }
-.nav-txt
-{
-	color: #66b5ff;
-	font-family: Circular Std Medium;
-
+a{
+	text-decoration: none !important;
+	font-weight: 400;
 }
-.nav-txt_2
-{
-	color: white;
-	font-family: Circular Std Medium;
+.btn-primary {
+    color: #fff;
+    background-color: #FF6F5E;
+    border-color: #FF6F5E;
 }
-li
-{
-	display: inline;
-	padding-right: 50px;
-	color: white;
+.btn-primary:hover{
+    color: #fff;
+    background-color: #FF6F5E;
+    border-color: #FF6F5E;
 }
-/*First Section*/
-.section_one
-{
-	background-color:#1a1a65;
-	width: auto;
-	height: 600px;
-}
-.section-txt
-{
-	font-family: Circular Std Black;
-	color:#e62e00;
-	font-size: 4em;
-
-}
-.container_one
-{
-	padding-top: 100px;
-
-}
-/*Second Section*/
-.section_two
-{
-	background-color:#e6f7ff;
-	width: auto;
-	height: auto;
-}
-.container_two
-{
-	padding-top: 50px;
-	padding-left: 50px;
-
-}
-.Tour_txt_one
-{
-	font-family: Circular Std Medium;
-	font-size: 2em;
-	color: #10103d;
-
-}
-.Tour_txt_two
-{
-	font-family: Circular Std Black;
-	font-size: 3em;
-	color: #10103d;
-}
-.imgBx{
-    width: 90%;
-    height: 500px;
+header{
+	width: 100%;
+    position: relative;
+    top: 0;
+    z-index: 1;
+	background: #1D2B48;
     overflow: hidden;
- }
- .imgBx img{
+}
+
+/* === navigation bar section === */
+header .content{
     width: 100%;
-    height: 400px;
- }
- .Tour_footer_one
- {
- 	font-family: Circular Std Medium;
-	font-size: 2em;
-	color: #ff3300;
-	padding-right: 20px;
- }
- .Tour_footer_two
- {
-	font-family: Circular Std Black;
-	font-size: 3em;
-	color:#ff3300;
-	padding-right: 20px;
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem 1rem;
+    position: relative;
 }
-.fa
-{
-	padding-right: 30px;
+
+header .row{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    white-space: nowrap;
+	align-items: center;
+	padding: unset;
 }
+
+header .logo{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+	font-family: StdBold;
+	text-transform: uppercase;
+}
+
+header .logo span{
+	color: #ADDCCA !important;
+}
+
+header nav.links{
+	display: inline-block;
+	position: relative;
+}
+
+header nav.links a{
+    font-family: StdBook;
+    line-height: 1.5;
+    display: inline-block;
+    color: #fff;
+    padding: .4rem 1.5rem;
+    text-transform: uppercase;
+    position: relative;
+    font-size: 16px;
+}
+header nav.links a.bttn{
+	border: 2px solid #ADDCCA;
+	border-radius: 4px;
+	margin-left: 0.5rem;
+}
+
+
+
+
+section.landingWrapper{
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	background: #2C3D63 0% 0% no-repeat padding-box;
+}
+.landingContent{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: calc(100vh - 95px);
+	padding: 5rem 0;
+}
+.landingWrapper .landingText{
+	color: #FF6F5E;
+	font-family: StdBold;
+	text-align: center;
+	font-size: 50px;
+	margin-bottom: 5rem;
+	letter-spacing: 5px;
+}
+
+main .mostVisited{
+	background-color: #F7F8F3;
+	padding: 5rem 0;
+}
+.mostVisited .blTxt h3{
+	font-size: 35px;
+	font-family: StdBold;
+	color: #2C3D63;
+}
+.visitedNavs a{
+	height: 50px;
+    width: 50px;
+    background: #2C3D63;
+    display: inline-block;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+	padding: 0;
+	font-size: 30px;
+	margin: 0 5px;
+}
+.visitedNavs a i{
+	padding: unset;
+	color: #FFFFFF;
+}
+.btBtTxt h3{
+	font-size: 35px;
+	font-family: StdBold;
+	color: #FF6F5E;
+	text-align: right;
+}
+.btBtTxt h1{
+	font-size: 45px;
+	font-family: StdBold;
+	color: #FF6F5E;
+	text-align: right;
+}
+.btBtTxt p{
+ text-align: right;
 }
