@@ -28,6 +28,19 @@ a{
 	text-decoration: none !important;
 	font-weight: 400;
 }
+.text-primary{
+	color: #FF6F5E !important;
+}
+.btn-info{
+	color: #fff;
+	background-color: #ADDCCA;
+	border-color: #ADDCCA;
+}
+.btn-info:hover{
+	color: #fff;
+	background-color: #ADDCCA;
+	border-color: #ADDCCA;
+}
 .btn-primary {
     color: #fff;
     background-color: #FF6F5E;
@@ -38,6 +51,9 @@ a{
     background-color: #FF6F5E;
     border-color: #FF6F5E;
 }
+.z-md{
+	z-index: 9 !important;
+}
 header{
 	width: 100%;
     position: relative;
@@ -46,7 +62,10 @@ header{
 	background: #1D2B48;
     overflow: hidden;
 }
-
+header.fixed{
+	position: fixed;
+	z-index: 99;
+}
 /* === navigation bar section === */
 header .content{
     width: 100%;
@@ -120,25 +139,54 @@ section.landingWrapper{
 	align-items: center;
 	width: 100%;
 	height: calc(100vh - 95px);
-	padding: 5rem 0;
+	padding: 7rem 0;
+}
+.landingContent p{
+	position: absolute;
+	bottom: 2rem;
+	color: #fff;
+	font-size: 20px;
+	animation: animatearrowbottom 1s  infinite;
+	transition: 1.5s;
+	cursor: pointer;
+}
+@keyframes animatearrowbottom{
+	0%{
+		bottom: 3rem;
+	}
+	50%{
+		bottom: 2rem;
+	}
+	100%{
+		bottom: 3rem;
+	}
 }
 .landingWrapper .landingText{
 	color: #FF6F5E;
 	font-family: StdBold;
 	text-align: center;
-	font-size: 50px;
+	font-size: 55px;
 	margin-bottom: 5rem;
-	letter-spacing: 5px;
+	letter-spacing: 2px;
 }
-
+main{
+	position: relative;
+	background: #F7F8F3;
+	width: 100%;
+    min-height: 100vh;
+}
 main .mostVisited{
-	background-color: #F7F8F3;
 	padding: 5rem 0;
 }
-.mostVisited .blTxt h3{
-	font-size: 35px;
+.blTxt h3{
+	font-size: 30px;
 	font-family: StdBold;
 	color: #2C3D63;
+}
+.blTxt h1{
+	font-size: 45px;
+	font-family: StdBold;
+	color: #2c3D63;
 }
 .visitedNavs a{
 	height: 50px;
@@ -157,7 +205,7 @@ main .mostVisited{
 	color: #FFFFFF;
 }
 .btBtTxt h3{
-	font-size: 35px;
+	font-size: 30px;
 	font-family: StdBold;
 	color: #FF6F5E;
 	text-align: right;
@@ -170,4 +218,186 @@ main .mostVisited{
 }
 .btBtTxt p{
  text-align: right;
+}
+.siteContainer {
+	padding: 0 1rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row;
+
+}
+.siteCard{
+	height: 400px;
+	width: 300px;
+	position: relative;
+	border: none;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0 1.5rem;
+	display: inline-block;
+}
+.siteCard img{
+	min-height: 400px;
+}
+
+.exploreContainer{
+	padding-top: 7rem;
+}
+aside .explore{
+	top: 95px;
+	padding: 35px 0;
+    position: fixed;
+}
+.exploreCard{
+	min-height: 450px;
+	width: 100%;
+	position: relative;
+	border: none;
+	border-radius: 5px;
+	overflow: hidden;
+	margin: 0.75rem 1.5rem;
+	display: inline-block;
+}
+.exploreCard .imgContainer{
+	height: 250px;
+	position: relative;
+	overflow: hidden;
+}
+.exploreCard .imgContainer img{
+	min-height: 250px;
+}
+.exploreCard .details{
+	position: relative;
+	padding: 1rem;
+}
+
+.exploreCard .details h3{
+	color:#2C3D63;
+	font-family: StdBold;
+	font-size: 1.5rem;
+}
+
+.exploreCard .details p{
+	color: #2A2A2A;
+	font-family: StdBold;
+}
+.exploreCard .details p img{
+	width: 10px;
+}
+
+.explore p.tag{
+	border-radius: 5px;
+	background-color: #ADDCCA;
+	color: #fff;
+	padding: .8rem 1.5rem;
+	display: inline-block;
+	font-size: 12px;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+
+.searchBox {
+	border: 1px solid #2C3D63;
+	width: 250px;
+	margin: 3.3rem 0;
+	background-color: #fff;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.searchBox input{
+	height: 40px;
+	border: none;
+	outline: none;
+	width: 100%;
+	padding: 10px;
+}
+.searchBox div{
+	width: 40px;
+}
+
+
+.tourSite{
+	position: relative;
+	min-height: 100vh;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	padding: 5vh 0;
+	width: 100%;
+}
+
+.tourSite:after{
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #000;
+	opacity: 0.7;
+	z-index: 1;
+}
+.tourSite .card{
+	position: relative;
+	height: 200px;
+	overflow: hidden;
+	border: none;
+}
+
+.tourSite .card img{
+	min-height: 200px;
+	transform: scale(1.3);
+}
+
+.tourSite .descript h1{
+	font-size: 3.5rem;
+	color: #F7F8F3;
+	font-family: StdBold;
+
+}
+
+.tourSite .descript p{
+	font-size: 1rem;
+	color: #F7F8F3;
+	font-family: StdBook;
+}
+
+.tourSite .descript p span{
+	color: #F7F8F3;
+	background-color: #707879;
+	padding: .2rem .5rem;
+	border-radius: 30px;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 60px;
+	font-size: 12px;
+}
+
+.descript p span i{
+	color: #F6DE42;
+}
+/* .card:first-child{
+	background-color: #F7F8F3;
+}
+.card:nth-child(2){
+	background-color: #ADDCCA;
+}
+.card:nth-child(3){
+	background-color: #FF6F5E;
+}
+.card:nth-child(4){
+	background-color: #2C3D63;
+} */
+
+.btmtxt h3{
+	color: #F7F8F3;
+	font-family: StdBold;
+}
+
+.btmtxt h1{
+	font-family: StdBold;
+	color: #FF6F5E;
+	margin-bottom: 0;
 }
