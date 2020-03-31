@@ -46,6 +46,9 @@ a{
     background-color: #FF6F5E;
     border-color: #FF6F5E;
 }
+.btn-default{
+	background: #F7F8F3;
+}
 .btn-primary:hover{
     color: #fff;
     background-color: #FF6F5E;
@@ -104,6 +107,23 @@ header .logo span{
 header nav.links{
 	display: inline-block;
 	position: relative;
+}
+
+nav.linksMobile{
+	display: none;
+}
+nav.linksMobile a{
+    line-height: 40px;
+    display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	margin: 0 0.5rem;
+}
+nav.linksMobile a.profile{
+	background: #F7F8F3;
+	border-radius: 50%;
 }
 
 header nav.links a{
@@ -255,7 +275,7 @@ aside .explore{
 	border: none;
 	border-radius: 5px;
 	overflow: hidden;
-	margin: 0.75rem 1.5rem;
+	margin: 0.75rem 0;
 	display: inline-block;
 }
 .exploreCard .imgContainer{
@@ -271,7 +291,7 @@ aside .explore{
 	padding: 1rem;
 }
 
-.exploreCard .details h3{
+.exploreCard .details h3 a{
 	color:#2C3D63;
 	font-family: StdBold;
 	font-size: 1.5rem;
@@ -295,7 +315,13 @@ aside .explore{
 	text-transform: capitalize;
 	cursor: pointer;
 }
+.exploreCard .details .heart{
+	float: right;
+}
 
+.exploreCard .details .heart a{
+	color: #FF6F5E;
+}
 .searchBox {
 	border: 1px solid #2C3D63;
 	width: 250px;
@@ -319,12 +345,15 @@ aside .explore{
 
 .tourSite{
 	position: relative;
-	min-height: 100vh;
+	min-height: 100%;
 	background-position: center !important;
 	background-repeat: no-repeat !important;
 	background-size: cover !important;
-	padding: 5vh 0;
+	padding: 7rem 0;
 	width: 100%;
+	top:90px;
+	left:0;
+	z-index: 1;
 }
 
 .tourSite:after{
@@ -336,7 +365,10 @@ aside .explore{
 	width: 100%;
 	background: #000;
 	opacity: 0.7;
-	z-index: 1;
+	z-index: -1;
+}
+.tourSite .descript{
+	margin-bottom: 3rem;
 }
 .tourSite .card{
 	position: relative;
@@ -400,4 +432,202 @@ aside .explore{
 	font-family: StdBold;
 	color: #FF6F5E;
 	margin-bottom: 0;
+}
+
+nav.bottomNav{
+	display: none;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: #F7F8F3;
+	box-shadow: 0 4px 4px -4px rgba(0,0,0,0.12);
+	border-top: solid 1px #f2f2f2;
+	z-index: 9;
+}
+nav.bottomNav .content{
+	padding: 0 1rem;
+	position: relative;
+}
+nav.bottomNav .content nav{
+	align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 50px;
+}
+nav.bottomNav .content a{
+	display: block;
+	padding: 0 1rem;
+}
+
+.accountContent,
+.searchContent{
+	position: fixed;
+    left: 0;
+    bottom: 0;
+	right: 0;
+	height: auto;
+    background: #ffffff;
+    z-index: 9;
+	padding: 2rem;
+	-webkit-transition: all .5s ease-out; 
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out; 
+	/* transition: all .5s cubic-bezier(0.685, 0.0473, 0.346, 1); */
+	transition: all .5s ease-out;
+	transform: translate3d(0, 100%, 0); 
+	-webkit-transition: translate3d(0, 100%, 0); 
+    -moz-transition: translate3d(0, 100%, 0);
+    -o-transition: translate3d(0, 100%, 0);
+    -ms-transition: translate3d(0, 100%, 0);
+}
+.open-search .searchContent,
+.open-account .accountContent{
+	transform: translate3d(0, 0px, 0); 
+	-webkit-transform: translate3d(0, 0px, 0); 
+    -moz-transform: translate3d(0, 0px, 0);
+  	-o-transform: translate3d(0, 0px, 0);
+    -ms-transform: translate3d(0, 0px, 0);
+}
+.searchContent .content{
+	position: relative;
+	padding: 1rem 0;
+}
+
+@media screen and (max-width: 991px){
+	header nav.links{
+		display: none;
+	}
+	nav.linksMobile{
+		display: block;
+	}
+	header .logo{
+		font-size: 20px;
+		margin-left: 20px;
+	}
+	nav.bottomNav{
+		display: block;
+	}
+	section.landingWrapper{
+		min-height: unset !important;
+	}
+	.landingContent{
+		display: none;
+	}
+	main{
+		padding: 2rem;
+		background: #fff;
+	}
+	
+	main .mostVisited{
+		padding: 0;
+	}
+	.siteContainer{
+		justify-content: baseline;
+	}
+	.siteCard{
+		height: unset;
+	}
+	.siteCard img {
+		min-height: unset;
+	}
+	.blTxt h3{
+		font-size: 20px;
+	}
+	.blTxt h1{
+		font-size: 30px;
+	}
+	.btBtTxt h3{
+		text-align: left;
+		font-size: 20px;
+		color: #2c3d63;
+	}
+	.btBtTxt h1{
+		font-size: 30px;
+		color: #2c3d63;
+	}
+	.btBtTxt{
+		margin-left: unset !important;
+	}
+	aside .explore{
+		position: relative;
+		top: 0;
+		padding: 0;
+	}
+	.exploreContainer .col-12.col-md-6{
+		padding: 0;
+	}
+	.exploreContainer article .ml-auto{
+		display: none !important;
+	}
+	.exploreContainer article{
+		margin-bottom: 3rem;
+	}
+	.exploreContainer aside{
+		padding: 0 !important;
+	}
+	.exploreContainer {
+		padding-top: 6rem;
+	}
+	.exploreCard{
+		display: flex;
+		flex-direction: row;
+		/* align-items: baseline; */
+		min-height: unset;
+		background: transparent;
+		border: none;
+	}
+	.exploreCard .imgContainer{
+		height: unset;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 50%;
+		flex: 0 0 50%;
+		max-width: 50%;
+		border-radius: 10px;
+	}
+	.exploreCard .imgContainer img{
+		min-height: 100%;
+	}
+	.exploreCard .details{
+		padding-bottom: 0;
+	}
+	.exploreCard .details h3 a{
+		font-size: 1rem;
+	}
+	.exploreCard .details p{
+		font-size: 0.75rem;
+		margin: 0;
+	}
+	.exploreCard .details p a{
+		margin-top: .5rem;
+		display: inline-block;
+		background: #FF6F5E;
+		font-weight: 400;
+		color: #fff !important;
+		text-align: center;
+		white-space: nowrap;
+		vertical-align: middle;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		border: 1px solid transparent;
+		padding: .375rem .75rem;
+		font-size: 0.7rem;
+		line-height: 1.5;
+		border-radius: .25rem;
+		transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	}
+	.exploreCard .details p span{
+		display: none;
+	}
+	.explore p.tag{
+		border-radius: 30px;
+	}
+	.exploreCard .details .heart{
+		float: unset;
+	}
 }
