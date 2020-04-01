@@ -5,8 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>See Africa</title>
-        <link rel="stylesheet" href="Assets/css/owl.carousel.min.css">
+        <!-- <link rel="stylesheet" href="Assets/css/owl.carousel.min.css"> -->
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="assets/css/owl.carousel.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.css">
+        
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <!-- Main stylesheet -->
@@ -44,30 +48,46 @@
                             <h1>Tourist Sites</h1>
                         </div>
                         <div class="visitedNavs">
-                            <a href="#"><i class="fa fa-angle-left"></i></a>
-                            <a href="#"><i class="fa fa-angle-right"></i></a>
+                            <a href="#" class="trends_prev trends_nav"><i class="fa fa-angle-left ml-auto"></i></a>
+                            <a href="#" class="trends_next trends_nav"><i class="fa fa-angle-right ml-auto"></i></a>
+
                         </div>
                     </div>
                 </div>
                 <div class="container-fluid pt-3 pb-3">
-                    <div class="siteContainer">
-                    <div class="owl-carousel">
-                        <div class="item">
-                        <div class="siteCard card">
-                            <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
+                    <div class="col-md-12">
+                        <div class="owl-carousel  owl-theme  site_slider">
+                            <div class="owl-item">
+                                <div class="siteCard card">
+                                    <img src="Assets/images/castle-2419575.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="siteCard card">
+                                    <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="siteCard card">
+                                    <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="siteCard card">
+                                    <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="siteCard card">
+                                    <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="owl-item">
+                                <div class="siteCard card">
+                                    <img src="Assets/images/Elmina.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                        <div class="item">
-                        <div class="siteCard card">
-                            <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
-                        </div>
-                        </div>
-                        <div class="item">
-                        <div class="siteCard card">
-                            <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
-                        </div>
-                        </div>
-                    </div>
                     </div>
                 </div>
                 <div class="container">
@@ -96,37 +116,14 @@
         </nav>
 
 <!--Scripts References-->
-    <script type="text/javascript"src="Assets/js/jquery.min.js"></script>
-    <script type="text/javascript"src="Assets/js/owl.carousel.min.js"></script>
-    <script type="text/javascript"src="assets/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript"src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript"src="assets/js/fontawesome.min.js"></script>
-    <script type="text/javascript"src="assets/js/Popper.min.js"></script>
-
-
-    <!--Owl Carousel Js !!important-->
-    <script>
-            $(document).ready(function() {
-              var owl = $('.owl-carousel');
-              owl.owlCarousel({
-                margin: 10,
-                nav: true,
-                loop: true,
-                autoplay: true,
-                autoplayTimeout: 3000,
-                responsive: {
-                  0: {
-                    items: 1
-                  },
-                  600: {
-                    items: 2
-                  },
-                  1000: {
-                    items: 3
-                  }
-                }
-              })
-            });
-          </script>
+    <script type="text/javascript"src="assets/js/jquery.min.js"></script>
+    <!-- <script type="text/javascript"src="assets/js/owl.carousel.min.js"></script> -->
+    <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/fontawesome.min.js"></script>
+    <script type="text/javascript" src="assets/js/Popper.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
 </body>
