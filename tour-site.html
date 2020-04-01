@@ -5,76 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>See Africa</title>
-
+        <link rel="stylesheet" href="Assets/css/owl.carousel.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <!-- Main stylesheet -->
         <link rel="stylesheet" href="assets/css/style.css">
-        <style>
-            .z-md .btn-bg{
-                border-color: #fff;
-            }
-            nav.backLove{
-                display: none;
-            }
-            nav.backLove .content{
-                position: absolute;
-                background: transparent;
-                top: 2rem;
-                left: calc(1rem + 15px);
-                right: calc(1rem + 15px);
-                z-index: 9;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            
-            @media screen and (max-width: 991px){
-                header.fixed{
-                    display: none;
-                }
-                main{
-                    padding: 0;
-                }
-                .tourSite{
-                    padding: 5rem 1rem 3rem 1rem;
-                    top:0;
-                    min-height: 100vh;
-                }
-                .tourSite .descript{
-                    margin-top: 3rem;
-                }
-                .tourSite .descript h1{
-                    font-size: 2.5rem;
-                }
-                .btmtxt{
-                    padding-left:  15px;
-                }
-                .btmtxt h3{
-                    font-size: 1rem;
-                    margin-top: 1rem;
-                }
-                .btmtxt h1{
-                    font-size: 1.5rem;
-                }
-                .z-md .btn-bg{
-                    padding-right: 15px;
-                }
-                nav.backLove{
-                    display: block;
-                }
-            }
-
-        </style>
     </head>
     <body>
-        <nav class="backLove">
-            <div class="content">
-                <a href="explore.html"class="btn btn-default"><img src="assets/icons/Arrow Left.svg" alt=""></a>
-                <a href="#" class="text-primary"><i class="fa fa-heart"></i></a>
-            </div>
-        </nav>
         <header class="fixed">
             <div class="content">
                 <div class="row">
@@ -84,15 +22,11 @@
                         <a href="#">support</a>
                         <a href="#" class="bttn">sign up</a>
                     </nav>
-                    <nav class="linksMobile">
-                        <a href="#"><img src="assets/icons/Search.svg" alt=""></a>
-                        <a href="#" class="profile"><img src="assets/icons/profile.svg" alt=""></a>
-                    </nav>
                 </div>
             </div>
         </header>
         <main>
-            <section class="tourSite " style="background: url(assets/images/capecastle.jpg);">
+            <section class="tourSite d-flex align-items-end" style="background: url(assets/images/capecastle.jpg);">
                 <div class="container z-md">
                     <div class="row">
                         <div class="col-md-4">
@@ -106,27 +40,33 @@
                     <div class="row align-items-end">
                         <div class="col-md-8">
                             <div class="row">
-                                <div class="col-3">
+                                <div class="owl-carousel">
+                                    <div class="item">
                                     <div class="card">
                                         <img src="assets/images/capecastle.jpg" alt="" class="img-fluid">
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                
+                                    <div class="item">
+                                    <div class="card">
+                                        <img src="assets/images/capecastle.jpg" alt="" class="img-fluid">
+                                    
+                                    </div>
+                                </div>
+                                
+                                    <div class="item">
                                     <div class="card">
                                         <img src="assets/images/capecastle.jpg" alt="" class="img-fluid">
                                     </div>
                                 </div>
-                                <div class="col-3">
+                                    <div class="item">
                                     <div class="card">
                                         <img src="assets/images/capecastle.jpg" alt="" class="img-fluid">
                                     </div>
-                                </div>
-                                <div class="col-3">
-                                    <div class="card">
-                                        <img src="assets/images/capecastle.jpg" alt="" class="img-fluid">
                                     </div>
                                 </div>
                             </div>
+                        </div>
                         </div>
                         <div class="col-md-4">
                             <div class="row align-items-end justify-content-between">
@@ -145,6 +85,32 @@
                 </div>
             </section>
         </main>
-        <footer></footer> 
+            <!--Scripts References-->
+    <script type="text/javascript"src="Assets/js/jquery.min.js"></script>
+    <script type="text/javascript"src="Assets/js/owl.carousel.min.js"></script>
+           <!--Owl Carousel Js !!important-->
+    <script>
+            $(document).ready(function() {
+              var owl = $('.owl-carousel');
+              owl.owlCarousel({
+                margin: 10,
+                nav: true,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 2
+                  },
+                  1000: {
+                    items: 3
+                  }
+                }
+              })
+            });
+          </script>
     </body>
 </html>
