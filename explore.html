@@ -154,71 +154,98 @@
                 <nav>
                     <a href="index.html"><img src="assets/icons/home.svg" alt=""></a>
                     <a href="explore.html"><img src="assets/icons/Explore.svg" alt=""></a>
-                    <a href="#"><img src="assets/icons/WishList Icon.svg" alt=""></a>
-                    <a href="settings.html"><img src="assets/icons/Settings.svg" alt=""></a>
+                    <a href="#" class="notificationToggler"><img src="assets/icons/WishList Icon.svg" alt=""></a>
+                    <a href="#" class="settingsToggler"><img src="assets/icons/Settings.svg" alt=""></a>
                 </nav>
             </div>
         </nav>
         <section class="searchContent">
             <div class="content">
                 <div>
-                    <a href="#" class="btn btn-default"><img src="assets/icons/Arrow Left.svg" alt=""></a>
+                    <a href="#" class="btn btn-default closeSearchToggler"><img src="assets/icons/Arrow Left.svg" alt=""></a>
                 </div>
                 <div class="col-12">
                     <h2>Search</h2>
                     <div>
-                        <input type="text" placeholder="">
+                        <form>
+                            <input type="text" placeholder=""><button type="submit"><img src="assets/icons/Microphone.svg" alt=""></button>
+                        </form>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- Accout popup -->
         <section class="accountContent">
             <div class="content">
-kjnjvenjne
+                <div>
+                    <a href="#" class="btn btn-default closeAccountToggler"><img src="assets/icons/Arrow Left.svg" alt=""></a>
+                </div>
+            </div>
+        </section>
+        <section class="notificationContent">
+            <div class="content">
+                <div>
+                    <a href="#" class="btn btn-default closeNotificationToggler"><img src="assets/icons/Arrow Left.svg" alt=""></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- setting popup -->
+        <section class="settingsContent">
+            <div class="content">
+                <div>
+                    <a href="#" class="btn btn-default closeSettingsToggler"><img src="assets/icons/Arrow Left.svg" alt=""></a>
+                </div>
+                <div class="col-12">
+                    <h2>Settings</h2>
+                    <div class="row align-items-center settingcard">
+                        <div class="col-2">
+                            <p><i class="fa fa-cog"></i></p>
+                        </div>
+                        <div class="col-10">
+                            <p>
+                                <span class="head">General settings</span>
+                                howdy hbebbv ds vvds
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center settingcard">
+                        <div class="col-2">
+                            <p><i class="fa fa-cog"></i></p>
+                        </div>
+                        <div class="col-10">
+                            <p>
+                                <span class="head">General settings</span>
+                                howdy hbebbv ds vvds
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row align-items-center settingcard">
+                        <div class="col-2">
+                            <p><i class="fa fa-cog"></i></p>
+                        </div>
+                        <div class="col-10">
+                            <p>
+                                <span class="head">General settings</span>
+                                howdy hbebbv ds vvds
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 <!--Scripts References-->
-    <script type="text/javascript"src="assets/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript"src="assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript"src="assets/js/fontawesome.min.js"></script>
-    <script type="text/javascript"src="assets/js/jquery.js"></script>
-    <script type="text/javascript"src="assets/js/Popper.js"></script>
+    <script type="text/javascript"src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/fontawesome.min.js"></script>
+    <script type="text/javascript" src="assets/js/Popper.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
     <script>
         $(document).ready(function() {
-          // add active to  toggler
-          $("body").delegate(".searchToggler", "click", function(event) {
-              event.preventDefault();
-              $('body').addClass('open-search')
-              $('body').removeClass('open-account')
-              $('.searchToggler').addClass('closeSearchToggler')
-              $('.searchToggler').removeClass('searchToggler')
-              $('.closeAccountToggler').addClass('accountToggler')
-              $('.closeAccountToggler').removeClass('closeAccountToggler')    
-          })
-          // deactivate toggler
-          $("body").delegate(".closeSearchToggler", "click", function(event) {
-              event.preventDefault();
-              $('body').removeClass('open-search')
-              $('.closeSearchToggler').addClass('searchToggler')
-              $('.closeSearchToggler').removeClass('closeSearchToggler')
-          })
-
-          $("body").delegate(".accountToggler", "click", function(event) {
-              event.preventDefault();
-              $('body').addClass('open-account')
-              $('body').removeClass('open-search')
-              $('.accountToggler').addClass('closeAccountToggler')
-              $('.accountToggler').removeClass('accountToggler')
-              $('.closeSearchToggler').addClass('searchToggler')
-              $('.closeSearchToggler').removeClass('closeSearchToggler')
-          })
-          // deactivate toggler
-          $("body").delegate(".closeAccountToggler", "click", function(event) {
-              event.preventDefault();
-              $('body').removeClass('open-account')
-              $('.closeAccountToggler').addClass('accountToggler')
-              $('.closeAccountToggler').removeClass('closeAccountToggler')
-          })
         });
       </script>
 </body>
+</html>

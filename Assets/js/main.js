@@ -7,13 +7,13 @@ $(document).ready(function() {
             var trendsSlider = $('.site_slider');
             trendsSlider.owlCarousel({ 
                 loop: !1, 
-                margin: 30, 
+                margin: 10, 
                 nav: !1, 
                 dots: !1, 
                 autoplayHoverPause: !0, 
                 autoplay: !1, 
                 responsive: { 
-                    0: { items: 2 }, 
+                    0: { items: 1 }, 
                     575: { items: 2 }, 
                     991: { items: 4 } 
                 }
@@ -55,5 +55,80 @@ $(document).ready(function() {
             //       }
             //     }
             //   })
+
+    // add active to  toggler
+    $("body").delegate(".searchToggler", "click", function(event) {
+        event.preventDefault();
+
+        $('body').removeClass('open-account open-notification').addClass('open-search')
+
+        $('.searchToggler').addClass('closeSearchToggler').removeClass('searchToggler')
+
+        $('.closeAccountToggler').addClass('accountToggler').removeClass('closeAccountToggler')
+        $('.closeNotificationToggler').addClass('notificationToggler').removeClass('closeNotificationToggler') 
+        $('.closeSettingsToggler').addClass('settingsToggler').removeClass('closeSettingsToggler')
+           
+    })
+    // deactivate toggler
+    $("body").delegate(".closeSearchToggler", "click", function(event) {
+        event.preventDefault();
+        $('body').removeClass('open-search')
+        $('.closeSearchToggler').addClass('searchToggler').removeClass('closeSearchToggler')
+    })
+
+    $("body").delegate(".accountToggler", "click", function(event) {
+        event.preventDefault();
+
+        $('body').removeClass('open-search open-notification').addClass('open-account')
+
+        $('.accountToggler').addClass('closeAccountToggler').removeClass('accountToggler')
+
+        $('.closeSearchToggler').addClass('searchToggler').removeClass('closeSearchToggler')
+        $('.closeNotificationToggler').addClass('notificationToggler').removeClass('closeNotificationToggler')
+        $('.closeSettingsToggler').addClass('settingsToggler').removeClass('closeSettingsToggler')
+    })
+    // deactivate toggler
+    $("body").delegate(".closeAccountToggler", "click", function(event) {
+        event.preventDefault();
+        $('body').removeClass('open-account')
+        $('.closeAccountToggler').addClass('accountToggler').removeClass('closeAccountToggler')
+    });
+
+
+    $("body").delegate(".notificationToggler", "click", function(event) {
+        event.preventDefault();
+
+        $('body').removeClass('open-search open-account').addClass('open-notification')
+
+        $('.notificationToggler').addClass('closeNotificationToggler').removeClass('notificationToggler')
+
+        $('.closeSearchToggler').addClass('searchToggler').removeClass('closeSearchToggler')
+        $('.closeAccountToggler').addClass('accountToggler').removeClass('closeaccountToggler')
+        $('.closeSettingsToggler').addClass('settingsToggler').removeClass('closeSettingsToggler')
+    })
+    // deactivate toggler
+    $("body").delegate(".closeNotificationToggler", "click", function(event) {
+        event.preventDefault();
+        $('body').removeClass('open-notification')
+        $('.closeNotificationToggler').addClass('notificationToggler').removeClass('closeNotificationToggler')
+    });
+
+    $("body").delegate(".settingsToggler", "click", function(event) {
+        event.preventDefault();
+
+        $('body').removeClass('open-search open-account').addClass('open-settings')
+
+        $('.settingsToggler').addClass('closeSettingsToggler').removeClass('settingsToggler')
+
+        $('.closeSearchToggler').addClass('searchToggler').removeClass('closeSearchToggler')
+        $('.closeAccountToggler').addClass('accountToggler').removeClass('closeaccountToggler')
+        $('.closeNotificationToggler').addClass('notificationToggler').removeClass('closeNotificationToggler')
+    })
+    // deactivate toggler
+    $("body").delegate(".closeSettingsToggler", "click", function(event) {
+        event.preventDefault();
+        $('body').removeClass('open-settings')
+        $('.closeSettingsToggler').addClass('settingsToggler').removeClass('closeSettingsToggler')
+    });
 });
         

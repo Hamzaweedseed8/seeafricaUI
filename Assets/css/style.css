@@ -465,6 +465,8 @@ nav.bottomNav .content a{
 	padding: 0 1rem;
 }
 
+.settingsContent,
+.notificationContent,
 .accountContent,
 .searchContent{
 	position: fixed;
@@ -472,6 +474,7 @@ nav.bottomNav .content a{
     bottom: 0;
 	right: 0;
 	height: auto;
+	max-height: 100vh;
     background: #ffffff;
     z-index: 9;
 	padding: 2rem;
@@ -485,8 +488,22 @@ nav.bottomNav .content a{
 	-webkit-transition: translate3d(0, 100%, 0); 
     -moz-transition: translate3d(0, 100%, 0);
     -o-transition: translate3d(0, 100%, 0);
-    -ms-transition: translate3d(0, 100%, 0);
+	-ms-transition: translate3d(0, 100%, 0);
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+.open-settings:after{
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: .7;
+}
+
+.open-settings .settingsContent,
+.open-notification .notificationContent,
 .open-search .searchContent,
 .open-account .accountContent{
 	transform: translate3d(0, 0px, 0); 
@@ -500,6 +517,36 @@ nav.bottomNav .content a{
 	padding: 1rem 0;
 }
 
+.content .settingcard{
+	padding: .5rem 1rem;
+	margin: .5rem -15px;
+	background: #ADDCCA;
+	border-radius: 5px;
+	position: relative;
+}
+.content h2{
+	font-size: 1.6rem;
+    font-family: StdBold;
+    margin: 1.5rem -15px;
+}
+.settingcard p{
+	margin: 0;
+	font-family: StdBook;
+}
+.settingcard p i{
+	color: #2c3d63;
+	font-size: 1.5rem;
+}
+.settingcard p span{
+	display: block;
+	font-size: 1rem;
+	color: #fff;
+	text-transform: capitalize;
+}
+.settingcard p{
+	font-size: .75rem;
+	color: #F7F8F3;
+}
 @media screen and (max-width: 991px){
 	header nav.links{
 		display: none;
