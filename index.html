@@ -48,54 +48,43 @@
                             <h1>Tourist Sites</h1>
                         </div>
                         <div class="visitedNavs">
-                            <a href="#" class="trends_prev trends_nav"><i class="fa fa-angle-left ml-auto"></i></a>
-                            <a href="#" class="trends_next trends_nav"><i class="fa fa-angle-right ml-auto"></i></a>
-
+                            <a href="#" class="site_prev site_nav"><i class="fa fa-angle-left ml-auto"></i></a>
+                            <a href="#" class="site_next site_nav"><i class="fa fa-angle-right ml-auto"></i></a>
                         </div>
                     </div>
-                </div>
-                <div class="container-fluid pt-3 pb-3">
-                    <div class="col-md-12">
-                        <div class="owl-carousel  owl-theme  site_slider">
-                            <div class="owl-item">
-                                <div class="siteCard card">
-                                    <img src="Assets/images/castle-2419575.jpg" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class="owl-item">
-                                <div class="siteCard card">
-                                    <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class="owl-item">
-                                <div class="siteCard card">
-                                    <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class="owl-item">
-                                <div class="siteCard card">
-                                    <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class="owl-item">
-                                <div class="siteCard card">
-                                    <img src="Assets/images/capecastle.jpg" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class="owl-item">
-                                <div class="siteCard card">
-                                    <img src="Assets/images/Elmina.jpg" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container">
                     <div class="row">
+                        <div class="col-md-12 mb-4 p-0">
+                            <div class="owl-carousel owl-theme site_slider">
+                                <div class="owl-item siteCard card">
+                                    <img src="assets/images/KAKUM.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="owl-item siteCard card">
+                                    <img src="assets/images/Cape-Coast-Castle.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="owl-item siteCard card">
+                                    <img src="assets/images/capecastle.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="owl-item siteCard card">
+                                    <img src="assets/images/capecastle.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="owl-item siteCard card">
+                                    <img src="assets/images/capecastle.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="owl-item siteCard card">
+                                    <img src="assets/images/Elmina.jpg" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="visitedNavs d-none">
+                            <a href="#" class="site_prev site_nav"><i class="fa fa-angle-left ml-auto"></i></a>
+                            <a href="#" class="site_next site_nav"><i class="fa fa-angle-right ml-auto"></i></a>
+                        </div>
                         <div class="float-right ml-auto btBtTxt">
                             <h3>View all</h3>
                             <h1>Tourist Sites</h1>
-                            <p><a href="explore.html" class="btn btn-primary"><img src="assets/icons/Arrow Right.svg" alt=""></a></p>
+                            <p><a href="explore.html" class="btn btn-warning"><img src="assets/icons/Arrow Right.svg" alt=""></a></p>
                         </div>
                     </div>
                 </div>
@@ -109,11 +98,93 @@
                 <nav>
                     <a href="index.html"><img src="assets/icons/home.svg" alt=""></a>
                     <a href="explore.html"><img src="assets/icons/Explore.svg" alt=""></a>
-                    <a href="#"><img src="assets/icons/WishList Icon.svg" alt=""></a>
-                    <a href="settings.html"><img src="assets/icons/Settings.svg" alt=""></a>
+                    <a href="#" class="notificationToggler"><img src="assets/icons/WishList Icon.svg" alt=""></a>
+                    <a href="#" class="settingsToggler"><img src="assets/icons/Settings.svg" alt=""></a>
                 </nav>
             </div>
         </nav>
+
+        <!-- Notification Slide Up -->
+        <section class="notificationContent">
+            <div class="content">
+                <div>
+                    <a href="#" class="btn btn-default closeNotificationToggler"><img src="assets/icons/Arrow Left.svg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Notification</h2>
+                        <div class="notificationcard">
+                            <h3>free tour</h3>
+                            <div class="row d-flex justify-content-between">
+                                <p>Enjoy your first free signup tour</p>
+                                <span>1hr ago</span>
+                            </div>
+                        </div>
+                        <div class="notificationcard">
+                            <h3>free tour</h3>
+                            <div class="row d-flex justify-content-between">
+                                <p>Enjoy your first free signup tour</p>
+                                <span>1hr ago</span>
+                            </div>
+                        </div>
+                        <div class="notificationcard">
+                            <h3>free tour</h3>
+                            <div class="row d-flex justify-content-between">
+                                <p>Enjoy your first free signup tour</p>
+                                <span>1hr ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- setting Slide Up -->
+        <section class="settingsContent">
+            <div class="content">
+                <div>
+                    <a href="#" class="btn btn-default closeSettingsToggler"><img src="assets/icons/Arrow Left.svg" alt=""></a>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h2>Settings</h2>
+                        <div class="row align-items-center settingcard">
+                            <div class="col-2">
+                                <p><i class="fa fa-cog"></i></p>
+                            </div>
+                            <div class="col-10">
+                                <p>
+                                    <span class="head">General settings</span>
+                                    howdy hbebbv ds vvds
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center settingcard">
+                            <div class="col-2">
+                                <p><i class="fa fa-cog"></i></p>
+                            </div>
+                            <div class="col-10">
+                                <p>
+                                    <span class="head">General settings</span>
+                                    howdy hbebbv ds vvds
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row align-items-center settingcard">
+                            <div class="col-2">
+                                <p><i class="fa fa-cog"></i></p>
+                            </div>
+                            <div class="col-10">
+                                <p>
+                                    <span class="head">General settings</span>
+                                    howdy hbebbv ds vvds
+                                </p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </section>
     <!--Scripts References-->
     <script type="text/javascript"src="assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/owl.carousel.js"></script>
@@ -125,3 +196,9 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
+<!-- <style>
+    .owl-item{
+
+        width: 350px !important;
+    }
+</style> -->
