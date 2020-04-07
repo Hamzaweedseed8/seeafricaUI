@@ -593,11 +593,16 @@ nav.bottomNav .content a{
 	font-style: italic;
 	font-size: 10px;
 }
+form div p a,
 .content div p a{
 	color: #ADDCCA;
 	font-family: StdBook;
 }
 
+form div p a:hover,
+.content div p a:hover{
+	color: #ADDCCA;
+}
 
 
 .modal-open .modal {
@@ -605,7 +610,6 @@ nav.bottomNav .content a{
     justify-content: center;
 	align-items: center;
 	background: #2C3D63;
-	z-index: 9999;
 }
 
 section#Signup .modal-dialog{
@@ -618,23 +622,51 @@ section#Signup .modal-content {
     border-radius: 15px;
     display: flex;
 	width: 100%;
-	min-height: 400px;
+	min-height: 450px;
 	flex-direction: row;
 	overflow: hidden;
-}
-.modal-content .formInfo{
-	width: 50%;
-	padding: 3rem;
-}
-.inputField{
 	position: relative;
 }
+
+.modal-content .formInfo{
+	width: 50%;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in-Container{
+    left: 0;
+    z-index: 2;
+}
+.sign-up-Container{
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+.formInfo form{
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 0 3rem;
+    height: 100%;
+    justify-content: center;
+}
+
 .formInfo h2{
 	color: #2C3D63;
 	margin: 0;
+	margin-bottom: 30px;
 	font-family: StdBold;
 	text-transform: capitalize;
 }
+
+.inputField{
+	position: relative;
+}
+
 .inputField input{
     display:block;
     height: 40px;
@@ -649,9 +681,14 @@ section#Signup .modal-content {
 	padding: .5rem;
 }
 
+.modal-content .inputField input{
+	margin: 0;
+	margin-bottom: 30px !important;
+}
+
  .inputField label{
     position: absolute;
-    top:0;
+    top:5px;
     left:0;
     pointer-events: none;
     font-size: 16px;
@@ -660,16 +697,12 @@ section#Signup .modal-content {
 	padding: 0;
 	font-family: StdBook;
 }
+
+
  .inputField input:focus + label,
  .inputField input:valid + label{
     top: -25px;
     color: #0b183d;
-}
-.modal-content .img{
-	width: 50%;
-	background-position: center !important;
-	background-size: cover !important;
-	background-repeat: no-repeat;
 }
 
 
@@ -689,20 +722,80 @@ section#Signup .dismissbtn{
 	outline: none;
 }
 
+.overlay-Container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    z-index: 9;
+}
+
+.overlay{
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.overlay-panel{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+	background-position: center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat;
+}
+
+.overlay-right {
+    right:0;
+	transform: translateX(0);
+}
+
+.overlay-left {
+    transform: translateX(-20%);
+}
 
 
+/*Animation*/
 
+/*Move signin to the right*/
+.Container.right-panel-active .sign-in-Container{
+    transform: translateX(100%);
+}
 
+/*Move Overlay to the left */
+.Container.right-panel-active .overlay-Container{
+    transform: translateX(-100%);
+}
 
+/* bring sinup over sign in*/
+.Container.right-panel-active .sign-up-Container{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+}
 
+/*Move overlay back to right*/
+.Container.right-panel-active .overlay{
+    transform: translateX(50%);
+}
 
+.Container.right-panel-active .overlay-left{
+    transform: translateX(0);
+}
 
-
-
-
-
-
-
+.Container.right-panel-active .overlay-right{
+    transform: translateX(20%);
+}
 
 
 
@@ -887,7 +980,7 @@ section#Signup .dismissbtn{
 		display: block;
 		padding: 2rem;
 	}
-	.modal-content .img{
+	/* .modal-content .img{
 		display: none;
-	}
+	} */
 }

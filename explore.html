@@ -155,7 +155,7 @@
                 <nav>
                     <a href="index.html"><img src="assets/icons/home.svg" alt=""></a>
                     <a href="explore.html"><img src="assets/icons/Explore.svg" alt=""></a>
-                    <a href="#" class="notificationToggler"><img src="assets/icons/WishList Icon.svg" alt=""></a>
+                    <a href="#" class="notificationToggler"><img src="assets/icons/Alert_Gray.svg" alt=""></a>
                     <a href="#" class="settingsToggler"><img src="assets/icons/Settings.svg" alt=""></a>
                 </nav>
             </div>
@@ -205,7 +205,7 @@
                                 </div>
                             </div>
                             <div>
-                                <p><a href="#" class="signupToggler">Not yet a member ? Sign Up</a></p>
+                                <p><a href="#" class="signupToggler">Not yet a member ? Signup</a></p>
                             </div>
                         </form>
                     </div>
@@ -300,7 +300,7 @@
                         <h2>Settings</h2>
                         <div class="row align-items-center settingcard">
                             <div class="col-2">
-                                <p><i class="fa fa-cog"></i></p>
+                                <p><img src="assets/icons/Settings_Blue.svg" alt=""></p>
                             </div>
                             <div class="col-10">
                                 <p>
@@ -339,35 +339,70 @@
         <section class="modal fade" id="Signup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> 
             <div class="modal-dialog" role="document">
                 <button type="button" class="dismissbtn" data-dismiss="modal">x</button>
-                <div class="modal-content">
-                    <div class="formInfo">
-                        <h2>Get started</h2>
-                        <div class="inputField">
-                            <input type="text" name="name" required>
-                            <label for="name" >Name</label>
-                        </div> 
-                        <div class="inputField">
-                            <input type="password" name="password" required>
-                            <label for="password" >Password</label>
-                        </div>
-                        <div class="inputField">
-                            <input type="password" id="login_password" name="password" required>
-                            <label for="password" >Password</label>
-                        </div>
-                        <div class="d-flex align-items-end justify-content-between">
-                            <div>
-                                <p class="m-0">Create an</p>
-                                <h2 class="m-0">Account</h2>
+                <div class="modal-content Container" id="container">
+                    <div class="formInfo sign-in-Container">
+                        <form>
+                            <h2>Get started</h2>
+                            <div class="inputField">
+                                <input type="text" name="name" required>
+                                <label for="name" >Name</label>
+                            </div> 
+                            <div class="inputField">
+                                <input type="email" name="email" required>
+                                <label for="email" >Email</label>
+                            </div>
+                            <div class="inputField">
+                                <input type="password" name="password" required>
+                                <label for="password" >Password</label>
+                            </div>
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div>
+                                    <p class="m-0">Create an</p>
+                                    <h2 class="m-0">Account</h2>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary"><img src="assets/icons/Arrow Right.svg" alt=""></button>
+                                </div>
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-primary"><img src="assets/icons/Arrow Right.svg" alt=""></button>
+                                <p class="m-0"><a href="#" class="signUp">Have an accoutn already? Login</a></p>
                             </div>
-                        </div>
-                        <div>
-                            <p class="m-0"><a href="#">Have an accoutn already? Login</a></p>
-                        </div>
+                        </form>
                     </div>
-                    <div class="img" style="background: url(assets/images/capecastle.jpg);"></div>
+                    <div class="formInfo sign-up-Container">
+                        <form>
+                            <h2>Welcome back</h2>
+                            <div class="inputField">
+                                <input type="email" name="email" required>
+                                <label for="email" >Email</label>
+                            </div>
+                            <div class="inputField">
+                                <input type="password" name="password" required>
+                                <label for="password" >Password</label>
+                            </div>
+                            <div class="d-flex align-items-end justify-content-between">
+                                <div>
+                                    <!-- <p class="m-0">Create an</p> -->
+                                    <h2 class="m-0">Login</h2>
+                                </div>
+                                <div>
+                                    <button type="submit" class="btn btn-primary"><img src="assets/icons/Arrow Right.svg" alt=""></button>
+                                </div>
+                            </div>
+                            <div>
+                                <p class="m-0"><a href="#" class="logIn">Not yet a member ? Signup</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="overlay-Container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left" style="background: url(assets/images/KidsVR.jpg);">
+                            </div>
+                            <div class="overlay-panel overlay-right" style="background: url(assets/images/GirlVR.jpg);">
+                            </div>
+                        </div>
+                        <!-- <div class="img" style="background: url(assets/images/GirlVR.jpg);"></div> -->
+                    </div>
                 </div>
             </div>
         </section> 
@@ -382,6 +417,16 @@
     <script type="text/javascript" src="assets/js/main.js"></script>
     <script>
         $(document).ready(function() {
+            $("body").delegate(".logIn", "click", function(event) {
+                event.preventDefault();
+                $('#container').removeClass('right-panel-active')
+                console.log('hamza')
+            });
+
+            $("body").delegate(".signUp", "click", function(event) {
+                event.preventDefault();
+                $('.Container').addClass('right-panel-active')
+            });
         });
       </script>
 </body>
